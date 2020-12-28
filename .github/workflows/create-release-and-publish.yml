@@ -31,7 +31,6 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog }}
           draft: false
           prerelease: false
-            steps:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
