@@ -1,4 +1,4 @@
-# dataloader
+# loadmydata
 Utility functions for loading data sets.
 
 ## UEA/UCR time series classification repository
