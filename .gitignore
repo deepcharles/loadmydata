@@ -130,3 +130,4 @@ dmypy.json
 
 # custom
 dataloader/datasets/
+.vscode/settings.json
