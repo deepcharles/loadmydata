@@ -3,7 +3,7 @@ from pathlib import Path
 from sklearn.utils import Bunch
 from sktime.utils.data_io import load_from_tsfile_to_dataframe
 
-from dataloader.utils import (
+from loadmydata.utils import (
     download_from_remote_uea_ucr,
     get_local_data_path,
     get_uea_ucr_download_link,

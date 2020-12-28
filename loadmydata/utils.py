@@ -7,7 +7,7 @@ import requests
 from tqdm import tqdm
 from yarl import URL
 
-from dataloader.config import CONFIG
+from loadmydata.config import CONFIG
 
 
 def get_cache_home() -> str:

@@ -1,0 +1,1 @@
+from loadmydata.config import CONFIG
