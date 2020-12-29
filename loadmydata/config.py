@@ -1,9 +1,13 @@
 from configparser import ConfigParser
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-CONFIG_FILE_LOCATION = BASE_DIR / Path("config.ini")
+from yarl import URL
 
-CONFIG = ConfigParser()
-CONFIG.read(CONFIG_FILE_LOCATION)
+HERE = Path(__file__).parent.absolute()
 
+CONFIG = {
+    "cache_home": HERE / "datasets",
+    "uea_ucr_download_link": URL(
+        "http://www.timeseriesclassification.com/Downloads/"
+    ),
+}
