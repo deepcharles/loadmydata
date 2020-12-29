@@ -7,16 +7,16 @@ import requests
 from tqdm import tqdm
 from yarl import URL
 
-from loadmydata.config import CONFIG
+from loadmydata.config import CONFIG, BASE_DIR
 
 
 def get_cache_home() -> str:
     """Return the path of the cached data directory.
 
     The data dir is read from `config.ini`
-    (default value `dataloader/datasets/cached_datasets`).
+    (default value `loadmydata/datasets/cached_datasets`).
     """
-    return Path(CONFIG["dataloader"]["cache_home"])
+    return BASE_DIR / Path(CONFIG["loadmydata"]["cache_home"])
 
 
 def get_local_data_path(name: str):
@@ -33,7 +33,7 @@ def get_uea_ucr_download_link() -> str:
 
     The download link is read from `config.ini`.
     """
-    return URL(CONFIG["dataloader"]["uea_ucr_download_link"])
+    return URL(CONFIG["loadmydata"]["uea_ucr_download_link"])
 
 
 def download_from_remote_uea_ucr(name: str):

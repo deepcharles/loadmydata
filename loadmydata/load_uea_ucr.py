@@ -47,4 +47,5 @@ def load_uea_ucr_data(name: str) -> Bunch:
         y_test=y_test,
         description=description,
         url=(get_uea_ucr_download_link() / (name + ".zip")),
+        location = str(data_path.absolute().resolve())
     )
