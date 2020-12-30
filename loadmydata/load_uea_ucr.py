@@ -3,11 +3,8 @@ from pathlib import Path
 from sklearn.utils import Bunch
 from sktime.utils.data_io import load_from_tsfile_to_dataframe
 
-from loadmydata.utils import (
-    download_from_remote_uea_ucr,
-    get_local_data_path,
-    get_uea_ucr_download_link,
-)
+from loadmydata.utils import (download_from_remote_uea_ucr,
+                              get_local_data_path, get_uea_ucr_download_link)
 
 
 def load_uea_ucr_data(name: str) -> Bunch:
@@ -17,7 +14,7 @@ def load_uea_ucr_data(name: str) -> Bunch:
     whose keys are accessible as attributes.
     (See [here](https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html)
     for more information.)
-    
+
     Args:
         name (str): data set's name, e.g. `ArrowHead` (case-sensitive).
 
@@ -47,5 +44,5 @@ def load_uea_ucr_data(name: str) -> Bunch:
         y_test=y_test,
         description=description,
         url=(get_uea_ucr_download_link() / (name + ".zip")),
-        location = str(data_path.absolute().resolve())
+        location=str(data_path.absolute().resolve()),
     )
