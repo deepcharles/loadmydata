@@ -31,45 +31,45 @@ enable:
 labels:
   'bug':
     include:
-      - '/^bug(\\(.*\\))?:/i'
+      - '/^bug(\(.*\))?:(.*)'
     exclude: []
   'feat':
     include:
-      - '/^feat(\\(.*\\))?:/i'
+      - '/^feat(\(.*\))?:(.*)'
     exclude: []
   'fix':
     include:
-      - '/^fix(\\(.*\\))?:/i'
+      - '/^fix(\(.*\))?:(.*)'
     exclude: []
   'build':
     include:
-      - '/^build(\\(.*\\))?:/i'
+      - '/^build(\(.*\))?:(.*)'
     exclude: []
   'docs':
     include:
-      - '/^docs(\\(.*\\))?:/i'
+      - '/^docs(\(.*\))?:(.*)'
     exclude: []
   'style':
     include:
-      - '/^style(\\(.*\\))?:/i'
+      - '/^style(\(.*\))?:(.*)'
     exclude: []
   'test':
     include:
-      - '/^test(\\(.*\\))?:/i'
+      - '/^test(\(.*\))?:(.*)'
     exclude: []
   'chore':
     include:
-      - '/^chore(\\(.*\\))?:/i'
+      - '/^chore(\(.*\))?:(.*)'
     exclude: []
   'ci':
     include:
-      - '/^ci(\\(.*\\))?:/i'
+      - '/^ci(\(.*\))?:(.*)'
     exclude: []
   'perf':
     include:
-      - '/^perf(\\(.*\\))?:/i'
+      - '/^perf(\(.*\))?:(.*)'
     exclude: []
   'revert':
     include:
-      - '/^revert(\\(.*\\))?:/i'
+      - '/^revert(\(.*\))?:(.*)'
     exclude: []
