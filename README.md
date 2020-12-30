@@ -22,7 +22,6 @@ dataset_name = "ArrowHead"  # "AbnormalHeartbeat", "ACSF1", etc.
 data = load_uea_ucr_data(dataset_name) 
 
 print(data.description)
-
 print(data.X_train.shape)
 print(data.X_test.shape)
 print(data.y_train.shape)
