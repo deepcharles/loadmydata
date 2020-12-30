@@ -1,0 +1,24 @@
+# https://github.com/ZeWaka/KeywordLabeler
+
+# Determines if we search the title (optional). Defaults to true.
+matchTitle: true
+
+# Determines if we search the body (optional). Defaults to true.
+matchBody: true
+
+# Determines if label matching is case sensitive (optional). Defaults to true.
+caseSensitive: false
+
+# Explicit keyword mappings to labels. Form of match:label. Required.
+labelMappings:
+  "feat:":feat
+  "fix:":fix
+  "build:":build
+  "docs:":docs
+  "style:":style
+  "refactor:":refactor
+  "chore:":chore
+  "ci:":ci
+  "perf:":perf
+  "revert:":revert
+  "test:":test
