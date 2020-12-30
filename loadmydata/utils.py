@@ -1,8 +1,9 @@
+import os
 import shutil
 from pathlib import Path
 from urllib.request import urlretrieve
 from zipfile import ZipFile
-import os
+
 import requests
 from tqdm import tqdm
 
