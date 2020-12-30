@@ -11,7 +11,8 @@ The list of available data sets from UEA/UCR repository is available [here](http
 ```python
 from loadmydata.load_uea_ucr import load_uea_ucr_data
 
-data = load_uea_ucr_data("ArrowHead")
+dataset_name = "ArrowHead"  # "AbnormalHeartbeat", "ACSF1", etc. 
+data = load_uea_ucr_data(dataset_name) 
 
 print(data.description)
 
