@@ -5,6 +5,13 @@ Utility functions for loading data sets.
 
 The list of available data sets from UEA/UCR repository is available [here](http://www.timeseriesclassification.com/dataset.php).
 
+## Install
+
+Use `pip` to install.
+
+```
+pip install loadmydata
+```
 
 ## Usage
 
