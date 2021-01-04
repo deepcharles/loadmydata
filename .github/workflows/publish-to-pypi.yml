@@ -11,7 +11,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         bitness: [32, 64]
-        python: [36, 37, 38, 39]
+        python: [37, 38, 39]
         include:
           # Run 32 and 64 bit version in parallel for Linux and Windows
           - os: windows-latest
