@@ -1,10 +1,13 @@
 from pathlib import Path
 import pandas as pd
 
-from container import DataSet
+from loadmydata.container import DataSet
 from scipy.io.arff import loadarff
-from loadmydata.utils import (download_from_remote_uea_ucr,
-                              get_local_data_path, get_uea_ucr_download_link)
+from loadmydata.utils import (
+    download_from_remote_uea_ucr,
+    get_local_data_path,
+    get_uea_ucr_download_link,
+)
 
 
 def load_uea_ucr_data(name: str) -> DataSet:
@@ -34,13 +37,14 @@ def load_uea_ucr_data(name: str) -> DataSet:
 
     # load from downloaded (or cached) files
     data, meta = loadarff(data_path_train)
-    X_train = pd.DataFrame(data[column for column in meta.names() if column!="target"])
+    keep_col = [col for col in meta.names() if col != "target"]
+    X_train = pd.DataFrame(data[keep_col])
     y_train = data["target"].view().astype(str)
 
     data, meta = loadarff(data_path_test)
-    X_test = pd.DataFrame(data[column for column in meta.names() if column!="target"])
+    X_test = pd.DataFrame(data[keep_col])
     y_test = data["target"].view().astype(str)
-    
+
     with (open(data_path_description, encoding="ISO-8859-1")) as f:
         description = f.read()
 
