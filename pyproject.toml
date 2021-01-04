@@ -1,3 +1,6 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = [
+    "setuptools>=38.3.0",  # version with most `setup.cfg` bugfixes
+    "wheel"
+]
 build-backend = "setuptools.build_meta"
