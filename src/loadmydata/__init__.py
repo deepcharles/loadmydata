@@ -1,3 +1,3 @@
 from loadmydata.config import CONFIG
 
-__version__ = "0.0.3dev4"
+__version__ = "0.0.4rc1"
