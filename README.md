@@ -1,5 +1,11 @@
 # loadmydata
-Utility functions for loading data sets.
+Utility functions for loading data sets (Python 3.7++)
+
+The list of available data sets currently includes:
+
+- the UEA/UCR repository.
+
+This package relies on requests, tqdm, yarl (for the download), scipy and pandas (data container).
 
 ## UEA/UCR time series classification repository
 
