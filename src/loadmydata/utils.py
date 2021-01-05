@@ -6,6 +6,7 @@ from zipfile import ZipFile
 
 import requests
 from tqdm import tqdm
+from yarl import URL
 
 from loadmydata.config import CONFIG
 
@@ -28,7 +29,7 @@ def get_local_data_path(name: str):
     return get_cache_home() / name
 
 
-def get_uea_ucr_download_link() -> str:
+def get_uea_ucr_download_link() -> URL:
     """Return the download link to the UEA/UCR repository.
 
     The download link is read from `config.ini`.
@@ -36,7 +37,7 @@ def get_uea_ucr_download_link() -> str:
     return CONFIG["uea_ucr_download_link"]
 
 
-def download_from_remote_uea_ucr(name: str):
+def download_from_remote_uea_ucr(name: str) -> None:
     """Download and uncompress data from UEA/UCR repository.
 
     Args:
