@@ -1,6 +1,12 @@
 # loadmydata
 Utility functions for loading data sets.
 
+The list of available data sets currently includes:
+
+- the UEA/UCR repository.
+
+This package relies on requests, tqdm, yarl (for the download), scipy and pandas (data container).
+
 ## UEA/UCR time series classification repository
 
 The list of available data sets from UEA/UCR repository is available [here](http://www.timeseriesclassification.com/dataset.php).
