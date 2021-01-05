@@ -1,5 +1,5 @@
 # loadmydata
-Utility functions for loading data sets.
+Utility functions for loading data sets (Python 3.7++)
 
 The list of available data sets currently includes:
 
