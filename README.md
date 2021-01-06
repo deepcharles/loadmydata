@@ -24,7 +24,7 @@ pip install loadmydata
 ```python
 from loadmydata.load_uea_ucr import load_uea_ucr_data
 
-dataset_name = "ArrowHead"  # "AbnormalHeartbeat", "ACSF1", etc. 
+dataset_name = "ArrowHead"  # "AbnormalHeartbeat", "ACSF1", etc.
 data = load_uea_ucr_data(dataset_name)
 
 print(data.description)

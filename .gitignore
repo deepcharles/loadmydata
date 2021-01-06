@@ -129,6 +129,6 @@ dmypy.json
 .pyre/
 
 # custom
-loadmydata/datasets/
+src/loadmydata/datasets/
 .vscode/settings.json
 .DS_Store

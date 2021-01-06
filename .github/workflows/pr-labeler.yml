@@ -1,5 +1,5 @@
 name: Label PRs and issues
-on: 
+on:
   issues:
     types: [opened, edited, milestoned]
   pull_request_target:
