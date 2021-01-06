@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
-import pandas as pd
+from numpy.ma.core import MaskedArray
 from yarl import URL
 
 
@@ -10,9 +10,9 @@ from yarl import URL
 class DataSet:
     """Class for holding a data set (from the UEA/UCR repository)."""
 
-    X_train: pd.DataFrame
+    X_train: MaskedArray
     y_train: np.ndarray
-    X_test: pd.DataFrame
+    X_test: MaskedArray
     y_test: np.ndarray
     description: str
     url: URL
