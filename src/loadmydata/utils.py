@@ -14,8 +14,7 @@ from loadmydata.config import CONFIG
 def get_cache_home() -> str:
     """Return the path of the cached data directory.
 
-    The data dir is read from `config.ini`
-    (default value `loadmydata/datasets/cached_datasets`).
+    The data dir is read from the `CONFIG` variable.
     """
     return CONFIG["cache_home"]
 
