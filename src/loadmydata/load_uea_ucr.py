@@ -25,14 +25,15 @@ def load_Xy_from_arff(data_path: Path) -> (MaskedArray, np.ndarray):
     # load from downloaded (or cached) files
     data, meta = loadarff(data_path)
     names = meta.names()
+    target = names[-1]
     # are the data multivariate or univariate?
     is_multivariate = len(names) == 2
     is_univariate = not is_multivariate
     # load y, the target variable
-    y = data["target"].view().astype(str)
+    y = data[target].view().astype(str)
     # load X, the attributes
     if is_univariate:
-        keep_col = [col for col in names if col != "target"]
+        keep_col = [col for col in names if col != target]
         X_raw = data[keep_col].view()
     elif is_multivariate:
         X_raw = data[names[0]].view()
