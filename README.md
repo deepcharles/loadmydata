@@ -31,7 +31,7 @@ from loadmydata.padding import get_signal_shape
 
 # Assume that X contains a time series data set of shape (N, T, d)
 for signal in X:
-    # signal is a masked array of shape (N, T).
+    # signal is a masked array of shape (T, d).
     # The true number of samples of the signal (without extra padding)
     # can be accessed with `get_signal_shape`.
     n_samples, n_dims = get_signal_shape(signal)
