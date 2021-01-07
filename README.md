@@ -36,7 +36,7 @@ for signal in X:
     # can be accessed with `get_signal_shape`.
     n_samples, n_dims = get_signal_shape(signal)
     # To get the signal without the extra padding, do
-    signal_without_padding = signal[~signal.mask]
+    signal_without_padding = signal[:n_samples]
     # do something with signal_without_padding
     ...
 ```
