@@ -32,9 +32,11 @@ from loadmydata.padding import get_signal_shape
 # Assume that X contains a time series data set of shape (N, T, d)
 for signal in X:
     # signal is a masked array of shape (N, T).
-    # To get the signal without the extra padding, do
+    # The true number of samples of the signal (without extra padding)
+    # can be accessed with `get_signal_shape`.
     n_samples, n_dims = get_signal_shape(signal)
-    signal_without_padding = signal[:n_samples]
+    # To get the signal without the extra padding, do
+    signal_without_padding = signal[~signal.mask]
     # do something with signal_without_padding
     ...
 ```
