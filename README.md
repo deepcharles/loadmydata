@@ -19,10 +19,10 @@ pip install loadmydata
 ## Data format
 
 Consider a data set of *N* time series **y**<sup>(1)</sup>, **y**<sup>(2)</sup>,..., **y**<sup>(N)</sup>.
-Each **y**<sup>(n)</sup> has *T*<sup>(n)</sup> samples and d dimensions.
+Each **y**<sup>(n)</sup> has *T*<sup>(n)</sup> samples and *d* dimensions.
 Note that time series can have variable lengths, i.e. different *T*<sup>(n)</sup> but they share the same dimensionality *d*.
 
-Such a data set is contained in a `numpy` array of shape (*N*, *T*, *d*) where *T*:=`max`<sub>n</sub> *T*<sup>(n)</sup>$.
+Such a data set is contained in a `numpy` array of shape (*N*, *T*, *d*) where *T*:=max<sub>n</sub> *T*<sup>(n)</sup>.
 Time series with less than *T* samples are padded at the end with `numpy.nan`.
 In addition, the extra padding is masked using [numpy's MaskedArray](https://numpy.org/doc/stable/reference/maskedarray.html).
 
