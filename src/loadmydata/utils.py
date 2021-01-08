@@ -71,3 +71,14 @@ def download_from_remote_uea_ucr(name: str) -> None:
             zf.extractall(local_cache_data)
         # remove zip file
         os.remove(local_archive_path)
+        # Check if the extracted directory contains a single sub-directory and
+        # no other file.
+        directory_list = [x for x in local_cache_data.iterdir() if x.is_dir()]
+        non_directory_list = [
+            x for x in local_cache_data.iterdir() if not x.is_dir()
+        ]
+        if len(directory_list) == 1 and len(non_directory_list) == 0:
+            sub_dir = directory_list[0]
+            for element in sub_dir.iterdir():
+                shutil.move(element, sub_dir.parent)
+            os.rmdir(sub_dir)
