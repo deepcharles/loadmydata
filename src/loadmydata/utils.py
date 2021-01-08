@@ -80,5 +80,5 @@ def download_from_remote_uea_ucr(name: str) -> None:
         if len(directory_list) == 1 and len(non_directory_list) == 0:
             sub_dir = directory_list[0]
             for element in sub_dir.iterdir():
-                shutil.move(element, sub_dir.parent)
-            os.rmdir(sub_dir)
+                shutil.move(str(element), str(sub_dir.parent))
+            os.rmdir(str(sub_dir))
