@@ -2,7 +2,6 @@ from pathlib import Path
 
 import numpy as np
 import numpy.ma as ma
-import pandas as pd
 from numpy.ma.core import MaskedArray
 from scipy.io.arff import loadarff
 
