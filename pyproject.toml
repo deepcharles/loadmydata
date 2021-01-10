@@ -1,6 +1,10 @@
 [build-system]
 requires = [
-    "setuptools>=38.3.0",  # version with most `setup.cfg` bugfixes
-    "wheel"
+    "setuptools>=42",  # version with most `setup.cfg` bugfixes
+    "wheel",
+    "setuptools_scm[toml]>=3.4",  # https://scikit-hep.org/developer/packaging#git-tags-official-pypa-method
 ]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/ruptures/version.py"
