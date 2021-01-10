@@ -132,4 +132,4 @@ dmypy.json
 src/loadmydata/datasets/
 .vscode/settings.json
 .DS_Store
-src/ruptures/version.py
+src/loadmydata/version.py
