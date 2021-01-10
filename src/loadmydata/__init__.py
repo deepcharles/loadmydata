@@ -1,3 +1,4 @@
 from loadmydata.config import CONFIG
 
-__version__ = "0.0.6"
+# Convenient access to the version number
+from .version import version as __version__

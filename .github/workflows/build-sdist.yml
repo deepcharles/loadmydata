@@ -1,7 +1,12 @@
-name: Publish to Pypi
+# Build package (no upload)
+name: Build package
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
 
 jobs:
   deploy_sdist:
@@ -19,7 +24,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install build twine
           python -m build --sdist
-          twine upload -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} dist/*.tar.gz
       - uses: actions/upload-artifact@v2
         with:
           path: dist/*.tar.gz
