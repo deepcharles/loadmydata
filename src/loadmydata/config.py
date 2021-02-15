@@ -9,4 +9,7 @@ CONFIG = {
     "uea_ucr_download_link": URL(
         "http://www.timeseriesclassification.com/Downloads/"
     ),
+    "nyc_taxi_download_link": URL(
+        "https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause"
+    ),
 }
