@@ -16,6 +16,14 @@ Use `pip` to install.
 pip install loadmydata
 ```
 
+Alternatively, you can use `conda`:
+
+```
+conda config --add channels conda-forge
+conda install loadmydata
+```
+
+
 ## Data format
 
 Consider a data set of *N* time series **y**<sup>(1)</sup>, **y**<sup>(2)</sup>,..., **y**<sup>(N)</sup>.
