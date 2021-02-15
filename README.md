@@ -71,3 +71,22 @@ print(data.X_test.shape)
 print(data.y_train.shape)
 print(data.y_test.shape)
 ```
+
+## NYC taxi data set
+
+This data set contains the number of New York taxi passengers aggregated in 30 minutes buckets for the period between July 2014 and January 2015. There are five anomalies occur during the NYC marathon, Thanksgiving, Christmas, New Years day, and a snow storm.
+
+The raw data is from the NYC Taxi and Limousine Commission [1] and has been curated by [2].
+
+[1]: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+[2]: Ahmad, S., Lavin, A., Purdy, S., & Agha, Z. (2017). Unsupervised real-time anomaly detection for streaming data. Neurocomputing.
+
+### Usage
+
+```
+from loadmydata.load_nyc_taxi import load_nyc_taxi_dataset
+
+X, y, description = load_nyc_taxi_dataset()
+
+print(description)
+```
