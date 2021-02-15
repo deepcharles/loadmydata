@@ -83,7 +83,7 @@ The raw data is from the NYC Taxi and Limousine Commission [1] and has been cura
 
 ### Usage
 
-```
+```python
 from loadmydata.load_nyc_taxi import load_nyc_taxi_dataset
 
 X, y, description = load_nyc_taxi_dataset()
