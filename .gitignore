@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # custom
-src/loadmydata/datasets/
+src/loadmydata/datasets/*
 .vscode/settings.json
 .DS_Store
 src/loadmydata/version.py
