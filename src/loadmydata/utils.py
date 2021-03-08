@@ -11,12 +11,23 @@ from yarl import URL
 from loadmydata.config import CONFIG
 
 
-def get_cache_home() -> str:
+def get_cache_home() -> Path:
     """Return the path of the cached data directory.
 
-    The data dir is read from the `CONFIG` variable.
+    The data dir is read from the `CONFIG` variable and is created if it
+    does not exists.
     """
-    return CONFIG["cache_home"]
+    cache_home = CONFIG["cache_home"]
+    if not cache_home.exists():
+        cache_home.mkdir()
+    return cache_home
+
+
+def clear_data_home() -> None:
+    """Delete the content of the data cache."""
+    cache_home = CONFIG["cache_home"]
+    if cache_home.exists():
+        shutil.rmtree(cache_home)
 
 
 def get_local_data_path(name: str):
@@ -82,3 +93,19 @@ def download_from_remote_uea_ucr(name: str) -> None:
             for element in sub_dir.iterdir():
                 shutil.move(str(element), str(sub_dir.parent))
             os.rmdir(str(sub_dir))
+
+
+def is_directory_empty(dir_path: Path) -> bool:
+    """Check if a directory is empty.
+
+    Args:
+        dir_path (Path): path to directory
+
+    Returns:
+        bool: True if empty, False otherwise
+    """
+    assert (
+        dir_path.exists()
+    ), f"The provided directory does not exist: '{dir_path}'."
+    assert dir_path.is_dir(), f"Provide a directory path, not '{dir_path}'."
+    return not any(Path(dir_path).iterdir())
