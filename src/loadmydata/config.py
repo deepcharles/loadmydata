@@ -2,10 +2,11 @@ from pathlib import Path
 
 from yarl import URL
 
-HERE = Path(__file__).parent.absolute()
+LOADMYDATA_FOLDER_STR = ".loadmydata_datasets"
+CACHE_HOME = Path.home() / LOADMYDATA_FOLDER_STR
 
 CONFIG = {
-    "cache_home": HERE / "datasets",
+    "cache_home": CACHE_HOME,
     "uea_ucr_download_link": URL(
         "http://www.timeseriesclassification.com/Downloads/"
     ),

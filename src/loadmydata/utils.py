@@ -11,12 +11,23 @@ from yarl import URL
 from loadmydata.config import CONFIG
 
 
-def get_cache_home() -> str:
+def get_cache_home() -> Path:
     """Return the path of the cached data directory.
 
-    The data dir is read from the `CONFIG` variable.
+    The data dir is read from the `CONFIG` variable and is created if it
+    does not exists.
     """
-    return CONFIG["cache_home"]
+    cache_home = CONFIG["cache_home"]
+    if not cache_home.exists():
+        cache_home.mkdir()
+    return cache_home
+
+
+def clear_data_home() -> None:
+    """Delete the content of the data cache."""
+    cache_home = CONFIG["cache_home"]
+    if cache_home.exists():
+        shutil.rmtree(cache_home)
 
 
 def get_local_data_path(name: str):
