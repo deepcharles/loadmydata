@@ -93,3 +93,19 @@ def download_from_remote_uea_ucr(name: str) -> None:
             for element in sub_dir.iterdir():
                 shutil.move(str(element), str(sub_dir.parent))
             os.rmdir(str(sub_dir))
+
+
+def is_directory_empty(dir_path: Path) -> bool:
+    """Check if a directory is empty.
+
+    Args:
+        dir_path (Path): path to directory
+
+    Returns:
+        bool: True if empty, False otherwise
+    """
+    assert (
+        dir_path.exists()
+    ), f"The provided directory does not exist: '{dir_path}'."
+    assert dir_path.is_dir(), f"Provide a directory path, not '{dir_path}'."
+    return not any(Path(dir_path).iterdir())
