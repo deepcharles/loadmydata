@@ -78,8 +78,9 @@ This data set contains the number of New York taxi passengers aggregated in 30 m
 
 The raw data is from the NYC Taxi and Limousine Commission [1] and has been curated by [2].
 
-[1]: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
-[2]: Ahmad, S., Lavin, A., Purdy, S., & Agha, Z. (2017). Unsupervised real-time anomaly detection for streaming data. Neurocomputing.
+[1] https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+[2] Ahmad, S., Lavin, A., Purdy, S., & Agha, Z. (2017). Unsupervised real-time anomaly detection for streaming data. Neurocomputing.
 
 ### Usage
 
@@ -89,4 +90,43 @@ from loadmydata.load_nyc_taxi import load_nyc_taxi_dataset
 X, y, description = load_nyc_taxi_dataset()
 
 print(description)
+```
+
+## Human locomotion data set
+
+This data set consists of 1020 multivariate gait signals collected with two inertial measurement units, from 230 subjects undergoing a fixed protocol:
+
+- standing still,
+- walking 10 m,
+- turning around,
+- walking back,
+- stopping.
+
+In total, there are 8.5 h of gait time series. The measured population was composed of healthy subjects as well as patients with neurological or orthopedic disorders.
+The start and end time stamps of more than 40,000 footsteps are available, as well as a number of contextual information about each trial. This exact data set was used in [1] to design and evaluate a step detection procedure.
+
+The data are thoroughly described in [2].
+
+[1] Oudre, L., Barrois-Müller, R., Moreau, T., Truong, C., Vienne-Jumeau, A., Ricard, D., Vayatis, N., & Vidal, P.-P. (2018). Template-based step detection with inertial measurement units. Sensors, 18(11).
+
+[2] Truong, C., Barrois-Müller, R., Moreau, T., Provost, C., Vienne-Jumeau, A., Moreau, A., Vidal, P.-P., Vayatis, N., Buffat, S., Yelnik, A., Ricard, D., & Oudre, L. (2019). A data set for the study of human locomotion with inertial measurements units. Image Processing On Line (IPOL), 9.
+
+### Usage
+
+```python
+from loadmydata.load_human_locomotion import (
+    load_human_locomotion_dataset,
+    get_code_list,
+)
+
+code_list = get_code_list()
+code = code_list[9]  # '3-2'
+data = load_human_locomotion_dataset(code)
+
+print(data.signal)  # pandas array
+print(data.left_steps)  # numpy array (n_left_steps, 2)
+print(data.right_steps)  # numpy array (n_right_steps, 2)
+print(data.metadata)  # dictionary
+
+print(data.description)
 ```
