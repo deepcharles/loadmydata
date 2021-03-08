@@ -102,7 +102,7 @@ This data set consists of 1020 multivariate gait signals collected with two iner
 - walking back,
 - stopping.
 
-In total, there are 8.5 h of gait time series. The measured population was composed of healthy subjects as well as patients with neurological or orthopedic disorders.
+In total, there are 8.5 h of gait time series (sampled at 100 Hz). The measured population was composed of healthy subjects as well as patients with neurological or orthopedic disorders.
 The start and end time stamps of more than 40,000 footsteps are available, as well as a number of contextual information about each trial. This exact data set was used in [1] to design and evaluate a step detection procedure.
 
 The data are thoroughly described in [2].
