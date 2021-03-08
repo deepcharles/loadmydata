@@ -4,8 +4,9 @@ Utility functions for loading **time series** data sets (Python 3.6++).
 
 The list of available data sets currently includes:
 
-- the UEA/UCR repository.
-
+- the UEA/UCR repository,
+- the NYC taxi data set,
+- the Human locomotion data set.
 
 ## Install
 This package relies on requests, tqdm, yarl (for the download), and numpy.
