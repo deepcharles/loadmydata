@@ -5,7 +5,7 @@ import numpy.ma as ma
 from numpy.ma.core import MaskedArray
 from scipy.io.arff import loadarff
 
-from loadmydata.container import DataSet
+from sklearn.utils import Bunch
 from loadmydata.padding import pad_at_the_end
 from loadmydata.utils import (
     download_from_remote_uea_ucr,
@@ -53,7 +53,7 @@ def load_Xy_from_arff(data_path: Path) -> (MaskedArray, np.ndarray):
     return X, y
 
 
-def load_uea_ucr_data(name: str) -> DataSet:
+def load_uea_ucr_data(name: str) -> Bunch:
     """Return data for the given data set.
 
     The data are contained in a `DataSet` instance.
@@ -66,7 +66,7 @@ def load_uea_ucr_data(name: str) -> DataSet:
         name (str): data set's name, e.g. `ArrowHead` (case-sensitive).
 
     Returns:
-        [loadmydata.container.DataSet]: X_train, X_test, y_train, y_test, url
+        [sklearn.util.Bunch]: (dict-like) X_train, X_test, y_train, y_test, url
             and description of the data set.
     """
 
@@ -84,7 +84,7 @@ def load_uea_ucr_data(name: str) -> DataSet:
     with (open(data_path_description, encoding="ISO-8859-1")) as f:
         description = f.read()
 
-    return DataSet(
+    return Bunch(
         X_train=X_train,
         y_train=y_train,
         X_test=X_test,
