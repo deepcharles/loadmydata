@@ -78,8 +78,9 @@ This data set contains the number of New York taxi passengers aggregated in 30 m
 
 The raw data is from the NYC Taxi and Limousine Commission [1] and has been curated by [2].
 
-[1]: https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
-[2]: Ahmad, S., Lavin, A., Purdy, S., & Agha, Z. (2017). Unsupervised real-time anomaly detection for streaming data. Neurocomputing.
+[1] https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+[2] Ahmad, S., Lavin, A., Purdy, S., & Agha, Z. (2017). Unsupervised real-time anomaly detection for streaming data. Neurocomputing.
 
 ### Usage
 
@@ -102,11 +103,11 @@ This data set consists of 1020 multivariate gait signals collected with two iner
 - stopping.
 
 In total, there are 8.5 h of gait time series. The measured population was composed of healthy subjects as well as patients with neurological or orthopedic disorders.
-The start and end time stamps of more than 40,000 footsteps are available, as well as a number of contextual information about each trial. This exact data set was used in [[1]] to design and evaluate a step detection procedure.
+The start and end time stamps of more than 40,000 footsteps are available, as well as a number of contextual information about each trial. This exact data set was used in [1] to design and evaluate a step detection procedure.
 
 The data are thoroughly described in [2].
 
-[[1]] Oudre, L., Barrois-Müller, R., Moreau, T., Truong, C., Vienne-Jumeau, A., Ricard, D., Vayatis, N., & Vidal, P.-P. (2018). Template-based step detection with inertial measurement units. Sensors, 18(11).
+[1] Oudre, L., Barrois-Müller, R., Moreau, T., Truong, C., Vienne-Jumeau, A., Ricard, D., Vayatis, N., & Vidal, P.-P. (2018). Template-based step detection with inertial measurement units. Sensors, 18(11).
 
 [2] Truong, C., Barrois-Müller, R., Moreau, T., Provost, C., Vienne-Jumeau, A., Moreau, A., Vidal, P.-P., Vayatis, N., Buffat, S., Yelnik, A., Ricard, D., & Oudre, L. (2019). A data set for the study of human locomotion with inertial measurements units. Image Processing On Line (IPOL), 9.
 
