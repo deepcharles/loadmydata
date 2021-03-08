@@ -1,6 +1,6 @@
 # loadmydata
 
-Utility functions for loading **time series** data sets (Python 3.7++).
+Utility functions for loading **time series** data sets (Python 3.6++).
 
 The list of available data sets currently includes:
 
