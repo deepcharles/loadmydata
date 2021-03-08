@@ -125,7 +125,7 @@ data = load_human_locomotion_dataset(code)
 
 print(data.signal)  # pandas array
 print(data.left_steps)  # numpy array (n_left_steps, 2)
-print(data.right_steps)  # numpy array (right_steps, 2)
+print(data.right_steps)  # numpy array (n_right_steps, 2)
 print(data.metadata)  # dictionary
 
 print(data.description)
