@@ -14,6 +14,9 @@ CONFIG = {
         "https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause"
     ),
     "human_locomotion_download_link": URL("http://dev.ipol.im/~truong"),
+    "molene_meteo_download_link": URL(
+        "https://www.data.gouv.fr/fr/datasets/r/6e493a9b-0ef5-4a69-8a56-a7bfb4e35d14"
+    ),
 }
 
 # for the human locomotion data set
