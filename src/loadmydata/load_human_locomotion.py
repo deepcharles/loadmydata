@@ -76,7 +76,6 @@ def download_from_remote_human_locomotion() -> None:
 
         # get archive's url
         remote_archive_path = get_human_locomotion_download_link()
-        print(remote_archive_path)
         response = requests.get(remote_archive_path, stream=True)
         # handle the download progress bar
         total_size_in_bytes = int(response.headers.get("content-length", 0))
