@@ -4,7 +4,6 @@ from numpy.ma.core import MaskedArray
 
 
 def pad_at_the_end(signal: np.ndarray, pad_width: int) -> MaskedArray:
-
     assert pad_width >= 0, f"pad_width (={pad_width}) must be positive."
 
     if signal.ndim == 1:
@@ -15,7 +14,7 @@ def pad_at_the_end(signal: np.ndarray, pad_width: int) -> MaskedArray:
 
     return ma.masked_array(
         data=np.pad(
-            signal.reshape(n_samples, n_dims).astype(np.float),
+            signal.reshape(n_samples, n_dims).astype(float),
             pad_width=((0, pad_width), (0, 0)),
             mode="constant",
             constant_values=(np.nan,),
@@ -24,7 +23,7 @@ def pad_at_the_end(signal: np.ndarray, pad_width: int) -> MaskedArray:
     )
 
 
-def get_signal_shape(signal_padded: MaskedArray) -> (int, int):
+def get_signal_shape(signal_padded: MaskedArray) -> tuple[int, int]:
     err_msg = "Wrong dimensions: {signal_padded.shape}. Expected: (n_samples, n_dims)."
     assert signal_padded.ndim == 2, err_msg
 
