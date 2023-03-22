@@ -23,7 +23,7 @@ def pad_at_the_end(signal: np.ndarray, pad_width: int) -> MaskedArray:
     )
 
 
-def get_signal_shape(signal_padded: MaskedArray) -> (int, int):
+def get_signal_shape(signal_padded: MaskedArray) -> tuple[int, int]:
     err_msg = "Wrong dimensions: {signal_padded.shape}. Expected: (n_samples, n_dims)."
     assert signal_padded.ndim == 2, err_msg
 
