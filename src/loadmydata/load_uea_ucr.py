@@ -81,7 +81,7 @@ def load_uea_ucr_data(name: str) -> Bunch:
     X_train, y_train = load_Xy_from_arff(data_path_train)
     X_test, y_test = load_Xy_from_arff(data_path_test)
     # load description
-    with (open(data_path_description, encoding="ISO-8859-1")) as f:
+    with open(data_path_description, encoding="ISO-8859-1") as f:
         description = f.read()
 
     return Bunch(
