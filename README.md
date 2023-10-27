@@ -55,7 +55,7 @@ for signal in X:
 The UEA/UCR repository focuses on time series classification.
 As a result, each signal is associated with a label to predict.
 
-The list of available data sets from the UEA/UCR repository is available [here](http://www.timeseriesclassification.com/dataset.php).
+The list of available data sets from the UEA/UCR repository is available [here](https://www.timeseriesclassification.com/dataset.php).
 
 
 ### Usage example
