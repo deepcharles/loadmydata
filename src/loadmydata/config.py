@@ -8,12 +8,12 @@ CACHE_HOME = Path.home() / LOADMYDATA_FOLDER_STR
 CONFIG = {
     "cache_home": CACHE_HOME,
     "uea_ucr_download_link": URL(
-        "http://www.timeseriesclassification.com/Downloads/"
+        "https://www.timeseriesclassification.com/aeon-toolkit/"
     ),
     "nyc_taxi_download_link": URL(
         "https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause"
     ),
-    "human_locomotion_download_link": URL("http://dev.ipol.im/~truong"),
+    "human_locomotion_download_link": URL("https://dev.ipol.im/~truong"),
     "molene_meteo_download_link": URL(
         "https://www.data.gouv.fr/fr/datasets/r/6e493a9b-0ef5-4a69-8a56-a7bfb4e35d14"
     ),
